@@ -14,7 +14,7 @@ signal=a*sin(2*pi*f*t+phi)
 fig,ax = subplots(figsize=(10,4))
 xlim(0,0.010); ylim(-10, 10)
 plot(t[0:100],signal[0:100])
-st.latex('''a \sin(2 \pi f t)''') 
+st.latex('''a \sin(2 \pi f t + phi)''') 
 st.pyplot(fig)
 
 
