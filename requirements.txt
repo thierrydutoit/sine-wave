@@ -1,5 +1,5 @@
 numpy
 matplotlib
-libsndfile1-dev
+libsndfile-dev
 soundfile
 streamlit
