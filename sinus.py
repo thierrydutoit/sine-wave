@@ -1,6 +1,11 @@
 import streamlit as st
 from numpy import *
 from matplotlib.pyplot import *
+import soundfile
+
+def sp_audio(np_array, samplerate=44100):
+    soundfile.write('temp.wav', np_array/100, samplerate)
+    st.audio('temp.wav')
 
 st.title('My first sine wave')
 a=st.slider('Amplitude a', 0.0, 10.0, 5.0)
@@ -16,6 +21,4 @@ xlim(0,0.010); ylim(-10, 10)
 plot(t[0:100],signal[0:100])
 st.latex('''a \sin(2 \pi f t + phi)''') 
 st.pyplot(fig)
-
-
-
+sp_audio(signal,10000)
