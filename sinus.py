@@ -10,7 +10,7 @@ def sp_audio(np_array, samplerate=44100):
 st.title('My first sine wave')
 a=st.slider('Amplitude a', 0.0, 10.0, 5.0)
 f=st.slider('Frequency f [Hz]', 0, 1000, 440)
-phi=st.slider('Phase phi [rad]', -pi, pi, 0.0)
+phi=st.slider('Phase phi [rad]', -pi, pi, 0.0) 
 
 fe=10000;
 t=arange(0.0,1,1/fe) 
