@@ -3,7 +3,7 @@ from numpy import *
 from matplotlib.pyplot import *
 import soundfile
 
-def sp_audio(np_array, samplerate=44100):
+def st_audio(np_array, samplerate=44100):
     soundfile.write('temp.wav', np_array/100, samplerate)
     st.audio('temp.wav')
 
@@ -22,4 +22,4 @@ xlim(0,0.010); ylim(-10, 10)
 plot(t[0:100],signal[0:100])
 xlabel('Time (seconds)')   
 st.pyplot(fig)
-sp_audio(signal,10000)
+st_audio(signal,10000)
