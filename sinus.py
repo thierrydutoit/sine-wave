@@ -3,9 +3,11 @@ from numpy import *
 from matplotlib.pyplot import *
 import soundfile
 
-def st_audio(np_array, samplerate=44100):
-    soundfile.write('temp.wav', np_array/100, samplerate)
-    st.audio('temp.wav')
+def st_audio(signal, samplerate=44100):
+    byte_io = io.BytesIO()
+    sub = 'FLOAT'  # could be 'PCM_32' or 'FLOAT'
+    soundfile.write(byte_io, signal, samplerate, subtype=sub, format='WAV')
+    st.audio(byte_io)
 
 st.title('My first sine wave')
 a=st.slider('Amplitude a', 0.0, 10.0, 5.0)
