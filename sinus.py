@@ -2,6 +2,7 @@ import streamlit as st
 from numpy import *
 from matplotlib.pyplot import *
 import soundfile
+import io
 
 def st_audio(signal, samplerate=44100):
     byte_io = io.BytesIO()
