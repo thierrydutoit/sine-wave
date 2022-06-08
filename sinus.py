@@ -10,6 +10,10 @@ def st_audio(signal, samplerate=44100):
     st.audio(byte_io)
 
 st.title('My first sine wave')
+st.markdown('''How do the amplitude, frequency and initial phase of a sine wave 
+               influence its shape and sound? Let us try...''')
+   
+
 a=st.slider('Amplitude a', 0.0, 10.0, 5.0)
 f=st.slider('Frequency f [Hz]', 0, 1000, 440)
 phi=st.slider('Phase phi [rad]', -pi, pi, 0.0) 
