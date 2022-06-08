@@ -6,8 +6,7 @@ import io
 
 def st_audio(signal, samplerate=44100):
     byte_io = io.BytesIO()
-    sub = 'FLOAT'  # could be 'PCM_32' or 'FLOAT'
-    soundfile.write(byte_io, signal, samplerate, subtype=sub, format='WAV')
+    soundfile.write(byte_io, signal, samplerate, subtype='FLOAT', format='WAV')
     st.audio(byte_io)
 
 st.title('My first sine wave')
@@ -19,10 +18,11 @@ fe=10000;
 t=arange(0.0,1,1/fe) 
 signal=a*sin(2*pi*f*t+phi)
 
-st.latex('''a \sin(2 \pi f t + phi)''') 
+st.markdown('''10 ms of $a \sin(2 \pi f t + phi)$''') 
 fig,ax = subplots(figsize=(10,4))
 xlim(0,0.010); ylim(-10, 10)
 plot(t[0:100],signal[0:100])
 xlabel('Time (seconds)')   
 st.pyplot(fig)
-st_audio(signal,10000)
+
+st_audio(signal,fe)
