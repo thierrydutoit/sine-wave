@@ -31,7 +31,7 @@ with st.expander("Open for comments"):
    st.markdown('''A sine wave is defined as:''')
    st.latex('''a \sin(2 \pi f t + phi)''') 
    st.markdown('''Its period T is given by:''')
-   st.latex('''2 \pi f T = k 2 \pi''')
+   st.latex('''2 \pi f T = 2 \pi''')
    st.latex('''T = 1/f''')
    st.markdown('''The higher $f$, the shorter $T$, and the higher the pitch of the sound.''')
    st.markdown('''The amplitude $a$ simply changes the loudness of the sound.''')
