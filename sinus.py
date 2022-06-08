@@ -26,3 +26,16 @@ xlabel('Time (seconds)')
 st.pyplot(fig)
 
 st_audio(signal,fe)
+
+with st.expander("Open for comments"):
+   st.markdown('''A sine wave is defined as:''')
+   st.latex('''a \sin(2 \pi f t + phi)''') 
+   st.markdown('''Its period T is given by:''')
+   st.latex('''2 \pi f T = k 2 \pi''')
+   st.latex('''T = 1/f''')
+   st.markdown('''The higher $f$, the shorter $T$, and the higher the pitch of the sound.''')
+   st.markdown('''The amplitude $a$ simply changes the loudness of the sound.''')
+   st.markdown('''The initial phase $phi$ simply delays or advances the signal (2 $\pi$ 
+                  corresponds to a one-period shift). Such a shift cannot be heard by 
+                  the human ear.''')
+    
