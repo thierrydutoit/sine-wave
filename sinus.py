@@ -35,7 +35,7 @@ with st.expander("Open for comments"):
    st.latex('''T = 1/f''')
    st.markdown('''The higher $f$, the shorter $T$, and the higher the pitch of the sound.''')
    st.markdown('''The amplitude $a$ simply changes the loudness of the sound.''')
-   st.markdown('''The initial phase $phi$ simply delays or advances the signal (2 $\pi$ 
+   st.markdown('''The initial phase $phi$ delays or advances the signal (2 $\pi$ 
                   corresponds to a one-period shift). Such a shift cannot be heard by 
                   the human ear.''')
     
